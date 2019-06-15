@@ -1,0 +1,71 @@
+<h2> Dokumentacija </h2>
+<hr style="color:#5555;"><br/>
+
+<section>
+    <h3>Opis projektnog zadatka</h3>
+    <p style="width: 80%; text-align: justify;">
+        Zadatak ove Web aplikacje je bio omogućiti prijavu legalizacijskog postupka za građevinske objekte.<br/>
+        Aplikacija je zamišljena u nekoliko slojeva od kojih su najbitniji:<br>
+        <ul>
+            <li>Moderator(građevinar),</li>
+            <li>Registrirani korisnik</li>
+        </ul>
+        Registrirani korisnik pregledava građevinare koji su u županiji građevinskog objekta, te šalje zahtjev za
+        legalizaciju. Moderator pregledava sve zahtjeve koji su njemu poslani (može vidjeti i ostale zahtjeve njegove
+        županije), te ih potvrđuje. Stavljanjem dokumenata, slika i videa o terenu, za dani zahtjev, mijenja se status
+        zahtjeva. Korisnik prihvaća obrađeni zahtjev.
+    </p>
+</section>
+
+<section>
+    <h3>Opis projektnog rješenja</h3>
+    <p style="width: 80%; text-align: justify;">
+        Bitno je napomenuti da u aplikaciji postoje četiri razine pristupa (redom od najveće prema najmanjoj):<br>
+        <ul>
+            <li>Administrator</li>
+            <li>Moderator</li>
+            <li>Registriani korisnik</li>
+            <li>Neregistrirani korisnik</li>
+        </ul>
+        Ovisno o razini, svaki od uloga ima odgovarajuće ovlasti.<br/><br/>
+        U projektu se primjenjuje MVC uzorak dizajna, a logika je sljedeća.<br/> Postoji klasa "SiteController.php"
+        koja prima sve GET zahtjeve, te ovisno o sadržaju query stringa, prosljeđuje odgovarajuću akciju, koja
+        pak za traženu akciju stvara model (ili više njih), view, te controller.
+        Model služi za komunikaciju s bazom podataka (svaka tablica je jedan model), te pomoću njega view stvara
+        svoj sadržaj. S druge strane, controller, nakon korisnikove interakcije, ažurira model te poziva odgovarajuću
+        akciju, čime se opet zapošljava SiteController.
+        Sve se događa u jednoj skripti - index.php (osim AJAX skripti), koja ima navigaciju i zaglavlje,
+        a sam sadržaj se prikazuje pomoću odgovarajućeg view-a.
+    </p>
+</section>
+
+<section>
+    <h3>ERA model</h3>
+    <img src="private/resources/site/era.png">
+</section>
+
+<section>
+    <h3>Navigacijski dijagram</h3>
+    <img src="private/resources/site/navigacijski.png">
+</section>
+
+<section>
+    <h3>Mapa mjesta i objašnjenje skripata</h3>
+    <img src="private/resources/site/cijeli.jpg">
+</section>
+
+<section>
+    <h3>Korištene tehnologije</h3>
+    <ul>
+        <li>JetBrains PHPStorm</li>
+        <li>Notepad++</li>
+        <li>WAMP</li>
+        <li>PHPMyAdmin</li>
+        <li>PHP</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+        <li>AJAX</li>
+        <li>HTML</li>
+        <li>CSS3</li>
+    </ul>
+</section>
